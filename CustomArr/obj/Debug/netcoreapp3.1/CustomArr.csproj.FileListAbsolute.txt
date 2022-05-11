@@ -1,0 +1,14 @@
+D:\C#\CustomArr\CustomArr\bin\Debug\netcoreapp3.1\CustomArr.exe
+D:\C#\CustomArr\CustomArr\bin\Debug\netcoreapp3.1\CustomArr.deps.json
+D:\C#\CustomArr\CustomArr\bin\Debug\netcoreapp3.1\CustomArr.runtimeconfig.json
+D:\C#\CustomArr\CustomArr\bin\Debug\netcoreapp3.1\CustomArr.runtimeconfig.dev.json
+D:\C#\CustomArr\CustomArr\bin\Debug\netcoreapp3.1\CustomArr.dll
+D:\C#\CustomArr\CustomArr\bin\Debug\netcoreapp3.1\CustomArr.pdb
+D:\C#\CustomArr\CustomArr\obj\Debug\netcoreapp3.1\CustomArr.csproj.AssemblyReference.cache
+D:\C#\CustomArr\CustomArr\obj\Debug\netcoreapp3.1\CustomArr.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\CustomArr\CustomArr\obj\Debug\netcoreapp3.1\CustomArr.AssemblyInfoInputs.cache
+D:\C#\CustomArr\CustomArr\obj\Debug\netcoreapp3.1\CustomArr.AssemblyInfo.cs
+D:\C#\CustomArr\CustomArr\obj\Debug\netcoreapp3.1\CustomArr.csproj.CoreCompileInputs.cache
+D:\C#\CustomArr\CustomArr\obj\Debug\netcoreapp3.1\CustomArr.dll
+D:\C#\CustomArr\CustomArr\obj\Debug\netcoreapp3.1\CustomArr.pdb
+D:\C#\CustomArr\CustomArr\obj\Debug\netcoreapp3.1\CustomArr.genruntimeconfig.cache
