@@ -114,19 +114,19 @@ namespace CustomArr
             this.customCollection = customCollection;
         }
 
-        public MyArrayList<T> findAll(CustomColection<T> customColection)
+        public T[] FindAll(CustomColection<T> customColection)
         {
             setCustomCollection(customColection);
             MyArrayList<T> newList = new MyArrayList<T>();
             foreach(T item in list)
             {
-                bool check = this.customCollection.findAllColection(item);
+                bool check = this.customCollection.FindAllColection(item);
                 if(check == true)
                 {
                     newList.add(item);
                 }
             }
-            return newList;
+            return newList.getList();
         }
 
     }

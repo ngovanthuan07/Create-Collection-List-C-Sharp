@@ -6,6 +6,6 @@ namespace CustomArr
 {
     interface CustomColection<T>
     {
-        bool findAllColection(T item);
+        bool FindAllColection(T item);
     }
 }

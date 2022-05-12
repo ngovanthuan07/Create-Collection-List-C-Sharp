@@ -8,7 +8,7 @@ namespace CustomArr
     {
         class Colection1 : CustomColection<Person>
         {
-            public bool findAllColection(Person item)
+            public bool FindAllColection(Person item)
             {
                 if (item.Age >= 30)
                     return true;
@@ -19,9 +19,12 @@ namespace CustomArr
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             MyArrayList<Person> people = new MyArrayList<Person>(getPeople());
-            MyArrayList<Person> findPeople = people.findAll(new Colection1());
+            // Hàng tự viết bằng việc truyền vào một interface
+            Person[] findPeople = people.FindAll(new Colection1());
+            // Hàm của C# cung cấp
+            Person[] findPeople2 = Array.FindAll(people.getList(), element => element.Age >= 30);
             Console.WriteLine("Mảng sau khi tim kiếm: ");
-            foreach(Person person in findPeople.getList())
+            foreach(Person person in findPeople)
             {
                 Console.WriteLine(person);
             }
