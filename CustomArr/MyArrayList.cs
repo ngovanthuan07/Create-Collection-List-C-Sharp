@@ -6,9 +6,9 @@ namespace CustomArr
 {
     class MyArrayList<T>
     {
-        private IList<T> list;
+        private T[] list;
 
-        public MyArrayList(IList<T> list)
+        public MyArrayList(T[] list)
         {
             this.list = list;
         }
@@ -18,13 +18,13 @@ namespace CustomArr
 
         public int size()
         {
-            return list.Count;
+            return list.Length;
         }
 
        
         public T get(int index)
         {
-           for(int i = 0; i < list.Count; i++)
+           for(int i = 0; i < list.Length; i++)
            {
                 if (i == index)
                     return list[i];
@@ -40,19 +40,19 @@ namespace CustomArr
             }
             else
             {
-                IList<T> newList = new T[list.Count + 1];
-                for (int i = 0; i < list.Count; i++)
+                T[] newList = new T[list.Length + 1];
+                for (int i = 0; i < list.Length; i++)
                 {
                     newList[i] = list[i];
                 }
-                newList[list.Count] = value;
+                newList[list.Length] = value;
                 list = newList;
             }
         }
         public void remove(int index)
         {
-            IList<T> newList = new T[list.Count - 1];
-            if (index < 0 && index > list.Count - 1) 
+            T[] newList = new T[list.Length - 1];
+            if (index < 0 && index > list.Length - 1) 
             {
                 Console.WriteLine("Can not index");
                 return;
@@ -62,7 +62,7 @@ namespace CustomArr
                 Console.WriteLine("List empty");
                 return;
             }    
-            for (int i = 0; i < list.Count - 1; i++)
+            for (int i = 0; i < list.Length - 1; i++)
             {
                 if(i >= index)
                 {
@@ -75,12 +75,12 @@ namespace CustomArr
 
         
 
-        public IList<T> getList()
+        public T[] getList()
         {
             return list;
         }
 
-        public void setList(IList<T> newList)
+        public void setList(T[] newList)
         {
             list = newList;
         }
@@ -89,7 +89,7 @@ namespace CustomArr
         {
             if (list == null)
                 return true;
-            if (list.Count == 0)
+            if (list.Length == 0)
                 return true;
             return false;
         }
@@ -106,6 +106,28 @@ namespace CustomArr
                 Console.WriteLine(value);
             }
         }
+
+        private CustomColection<T> customCollection;
         
+        public void setCustomCollection(CustomColection<T> customCollection)
+        {
+            this.customCollection = customCollection;
+        }
+
+        public MyArrayList<T> findAll(CustomColection<T> customColection)
+        {
+            setCustomCollection(customColection);
+            MyArrayList<T> newList = new MyArrayList<T>();
+            foreach(T item in list)
+            {
+                bool check = this.customCollection.findAllColection(item);
+                if(check == true)
+                {
+                    newList.add(item);
+                }
+            }
+            return newList;
+        }
+
     }
 }
